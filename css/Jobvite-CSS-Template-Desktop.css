@@ -1,61 +1,486 @@
-/* ===== SITE LAYOUT =================== */
-  .jv-page-container   { }
-  .jv-page       { }
-  .jv-page-content   { }
-  .jv-page-header   { }
-  .jv-page-body     { }
-  .jv-wrapper     { }
-  .jv-footer       { }
+<style type="text/css">
 
+/* ========== TYPOGRAPHY ====================== */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap');
+
+html,
+body {
+  color: #333333;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-variant-ligatures: no-common-ligatures;
+  font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h1,
+h3 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.25rem;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: 2.375rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: .25rem;
+}
+
+p,
+li {
+  font-size: 1rem;
+}
+
+ol,
+ul {
+  margin: 0 0 1rem 0;
+  padding-left: 2rem;
+}
+
+a,
+a:visited {
+  color: #0094ff;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color ease .25s;
+}
+
+a:hover {
+  color: #33a9ff;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  display: inline-block;
+  font-size: .75rem;
+  line-height: 1.25;
+}
+
+hr {
+  display: none;
+}
+
+/* ========== GENERAL CONTAINERS ====================== */
+.jv-page {
+  width: auto;
+}
+
+.jv-page-content {
+  padding-bottom: 3rem;
+}
+
+.jv-page-header {
+  background-color: #ccc;
+  background-image: linear-gradient(90deg, #002c50 0%, #026dce 40%, #66cc00 100%);
+  background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
+}
+
+.jv-page-header .jv-wrapper {
+  max-width: none;
+}
+
+.jv-page-body {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.jv-wrapper {
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.jv-footer {
+  display: none;
+}
+
+
+/* ========== WORKIVA BRANDING ====================== */
+.jv-page-header .jv-logo a {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/5bedd68bee175972af183ae7/1542687263465-BXTEWR1X2TZLRVQG00M2/ke17ZwdGBToddI8pDm48kMzH8skhzBWSKEj5ldDYiywUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcJAWAEaeQ3MZT3Scgt5_5uE9SCBaECGHefqGA29vqjMTz9EUNx2iVH3fnbcoEu9M3/workiva-logo+white.png?format=750w);
+  background-repeat: no-repeat;
+  background-color: none;
+    -webkit-background-attachment: fixed;
+    -moz-background-attachment: fixed;
+    -o-background-attachment: fixed;
+  background-attachment: fixed;
+  background-position: center 1rem;
+    -webkit-background-size: 20rem auto;
+    -moz-background-size: 20rem auto;
+    -o-background-size: 20rem auto;
+  background-size: 20rem auto;
+  color: #ffffff;
+  display: block;
+  height: 10rem;
+  text-decoration: none;
+  text-align: left;
+  text-indent: -999em;
+  width: 100%;
+}
+
+.jv-page-header h1 {
+  border: none;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+
+/* ===== CARD STYLES =================== */
+.jv-apply-form,
+.jv-job-list {
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
+  padding: 1rem;
+  transition: all ease .25s;
+}
+
+.jv-apply-form:hover,
+.jv-job-list:hover {
+  box-shadow: 0 2px 16px rgba(0,0,0,.4);
+}
+
+
+/* ========== JOBS OVERVIEW ====================== */
+.jv-page-jobs .jv-page-header {
+  background-image: url(https://www.workiva.com/sites/workiva/files/images/heroes/workiva-dream-job-hero-500.jpg);
+}
+
+.jv-page-jobs .jv-page-header .jv-logo a {
+    height: 20rem;
+    background-position: center 6rem;
+}
 
 
 /* ===== JOB LISTINGS PAGE  =================== */
+.jv-wrapper > h2 {
+  text-align: center;
+}
 
-  .jv-page-error     { }
-  .jv-page-body h2   { }
+h3.h2 {
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
 
+.jv-job-list {
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  margin-bottom: 3rem;
+  transition: all .35s ease;
+}
 
-  h3.h2           { }
-  .jv-job-list      { }
-  .jv-job-list th    { }
-  .jv-job-list td    { }
-  .jv-job-list .jv-job-list-name      { }
-  .jv-job-list .jv-job-list-location    { }
+.jv-job-list tr:hover {
+  background-color: #f3f3f3;
+}
 
+.jv-job-list td {
+  border-bottom: solid 1px #f3f3f3;
+  padding: .75rem 1rem;
+  vertical-align: middle;
+}
 
+.jv-job-list a {
+  display: inline;
+  position: relative;
+  vertical-align: middle;
+}
 
+.jv-job-list a,
+.jv-job-list a:visited {
+  text-decoration: none;
+  transition: color ease .25s;
+}
 
+.jv-job-list a:before {
+  background-color: #0094ff;
+  bottom: -2px;
+  content: "";
+  height: .125rem;
+  left: 0;
+  position: absolute;
+  right: 100%;
+  transition: all .35s ease;
+}
 
+.jv-job-list a:hover:before {
+  right: .5em;
+}
+
+.jv-job-list a:after {
+  border-left: .3rem solid #0094ff;
+  border-top: .3rem solid transparent;
+  border-bottom: .3rem solid transparent;
+  content: "";
+  display: inline-block;
+  margin: 0 0 0 .25em;
+}
 
 /* ========== JOB DETAILS PAGE =============== */
 
-  h2.jv-header   {}
+.jv-page-job .jv-header{
+  padding-right: 0;
+}
 
-  .jv-job-detail-meta,
-  .jv-apply-meta        {}
+.jv-apply-meta,
+.jv-job-detail-meta {
+  color: #333;
+  text-align: center;
+}
 
+.jv-job-detail-top-actions {
+  display: flex;
+  justify-content: center;
+  left: auto;
+  position: relative;
+  right: auto;
+  text-align: center;
+  top: auto;
+}
 
-  .jv-button { }
-  .jv-button-primary { }
+.jv-button-primary,
+.jv-button-apply-later {
+  background: none;
+  border: 2px solid transparent;
+  border-style: solid;
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 900;
+  letter-spacing: .75px;
+  text-align: center;
+  text-decoration: none;
+  transition: all ease .25s;
+}
 
-  .jv-current-openings   { }
-  .jv-share-widget     { }
+.jv-button-primary:hover,
+.jv-button-primary:visited,
+.jv-button-primary:active,
+.jv-button-apply-later:hover,
+.jv-button-apply-later:visited,
+.jv-button-apply-later:active {
+  background: none;
+  text-decoration: none;
+}
 
-  .jv-job-detail-bottom-actions,
-  .jv-apply-form-actions   { }
+.jv-button-primary {
+  color: #fff;
+  background-color: #0094ff;
+}
 
+.jv-button-primary:hover {
+  background-color: #33a9ff;
+  border: 2px solid #0094ff;
+}
 
+.jv-button-apply-later {
+  background-color: #ffffff;
+  color: #0094ff;
+}
 
+.jv-button-apply-later:hover {
+  box-shadow: 0px 2px 16px rgba(0,0,0,.4);
+  color: #33a9ff;
+}
 
+.jv-job-detail-bottom-actions {
+  padding: 1rem 0 2rem;
+}
+
+.jv-job-detail-bottom-actions .jv-button + .jv-button {
+  margin-left: 1rem;
+}
+
+.jv-current-openings a {
+  text-decoration: none;
+}
+
+.jv-job-detail-description {
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  margin: 40px auto;
+  transition: all .35s ease;
+}
+
+/* SHARE WIDGET */
+
+.jv-share-widget {
+  padding: 0 0 4rem;
+  text-align: center;
+}
+
+.jv-share-widget .jv-brand-linkedin,
+.jv-share-widget .jv-brand-facebook,
+.jv-share-widget .jv-brand-twitter,
+.jv-share-widget .jv-brand-jobvite {
+  background: none;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.jv-brand-facebook .icon {
+  bottom: auto;
+  position: relative;
+  right: auto;
+}
+
+.jv-share-widget .jv-button-list {
+  background: none;
+  border: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.jv-share-widget .jv-button-list-item {
+  border: none;
+  background: none;
+  margin: 0 1rem;
+  width: auto;
+}
+
+.jv-share-widget .jv-button-icon {
+  margin: 0;
+}
+
+.jv-share-widget .jv-icon-container {
+  height: auto;
+  width: auto;
+}
+
+.jv-share-widget .icon {
+  font-size: 2rem;
+  color: #333;
+  transition: all ease .25s;
+}
+
+.jv-share-widget a:hover .icon {
+  color: #33a9ff;
+}
 
 
 /* ========== APPLY PAGE ====================== */
 
-  .jv-form         {}
-  .jv-apply-form       {}
-  .jv-search-form     {}
+.jv-form {}
+.jv-apply-form {}
+.jv-search-form {}
 
-  .jv-apply-step       {}
-  .jv-apply-section     {}
-  .jv-step-header     {}     /* Section Title */
-  .jv-required-label     {}
+.jv-apply-step {}
+.jv-apply-section {}
+.jv-step-header {}
+.jv-required-label {}
+
+
+/* ========== JOB ALERTS ====================== */
+.jv-jobAlertContainer {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.jv-jobAlertContainer form > p:first-child {
+  font-size: 2.5rem;
+  line-height: 1.25;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1rem 0 2rem;
+  text-align: center;
+}
+
+.jv-jobAlertContainer .jv-form-field {
+  margin: 0 auto 1rem;
+  max-width: 800px;
+}
+
+.jv-jobAlertContainer .jv-form-field-label {
+  display: block;
+  font-weight: bold;
+}
+
+.jv-jobAlertContainer .jv-form-field-label + input {
+  display: block;
+  width: 100%;
+}
+
+.jv-jobAlertContainer .jv-form-categories ul,
+.jv-jobAlertContainer .jv-form-locations ul {
+  overflow: visible;
+  margin-bottom: 2rem;
+}
+
+.jv-jobAlertContainer .jv-form ul label {
+  font-weight: 400;
+  padding-left: 1em;
+}
+
+.jv-jobAlertContainer .jv-form-categories ul > li,
+.jv-jobAlertContainer .jv-form-locations ul > li {
+  display: inline-block;
+  float: none;
+  list-style: none;
+  margin: 0 0 1rem;
+  max-width: none;
+  padding: 0;
+  width: 33%;
+}
+
+.jv-jobAlertContainer .jv-form ul input[type="checkbox"],
+.jv-jobAlertContainer .jv-form ul input[type="radio"] {
+  margin-left: -1em;
+}
+
+.jv-jobAlertContainer hr + div {
+  font-size: 2.375rem;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+
+/* ========== JV Branding ====================== */
+.jv-powered-by {
+  display: none;
+}
+
+</style>
