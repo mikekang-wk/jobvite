@@ -1,0 +1,79 @@
+/* ===== SITE LAYOUT =================== */
+
+
+  .jv-page-container   {}
+  .jv-page       {}
+  .jv-page-content   {}
+
+  .jv-page-header   {}
+  .jv-tabs       {}
+  .jv-tab       {}
+
+  .jv-page-body     {}
+  .jv-wrapper     {}
+  .jv-footer       {}
+
+
+
+
+
+/* ===== JOB LISTINGS PAGE  =================== */
+
+  .jv-job-list-pane     {}
+  .jv-job-categories     {}
+  .jv-job-category-link   {}
+  .jv-job-category-label   {}
+  .jv-job-category-meta   {}
+  .jv-list-icon       {}
+
+  .jv-job-list       {}
+  .jv-job-list-inner     {}
+  .jv-job-item       {}
+  .jv-list-link       {}
+  .jv-list-label       {}
+  .jv-meta         {}
+
+
+
+
+
+
+
+/* ========== JOB DETAILS PAGE =============== */
+
+  h2.jv-header           {}
+  .jv-job-detail-location      {}
+
+  .jv-job-detail-top-actions     {}
+  .jv-job-detail-description     {}
+  .jv-job-detail-bottom-actions   {}
+
+
+  .jv-button         {}
+  .jv-button-primary     {}
+
+  .jv-current-openings   {}
+  .jv-share-widget     {}
+
+
+
+
+
+/* ========== APPLY PAGE ====================== */
+
+  .jv-sub-header       {}
+  .jv-apply-meta       {}
+  .jv-form         {}
+  .jv-apply-form       {}
+
+  .jv-apply-section     {}
+  .jv-step-header     {}     /* Section Title */
+  .jv-form-field       {}
+  .jv-form-field-control     {}
+  .jv-form-field-control input {}
+  .jv-select-group        {}
+  .jv-select-group label     {}
+  .jv-select-group select   {}
+
+  .jv-apply-form-actions   {}
+  .note           {}
