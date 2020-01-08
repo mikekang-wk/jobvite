@@ -94,6 +94,18 @@ hr {
   display: none;
 }
 
+.text-left {
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: center;
+}
+
 /* ========== GENERAL CONTAINERS ====================== */
 .jv-page {
   width: auto;
@@ -188,6 +200,47 @@ hr {
     background-position: center 6rem;
 }
 
+.jv-page-jobs .btn {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 900;
+    letter-spacing: .75px;
+    line-height: 1.5;
+    padding: 0.75rem 0.75rem;
+    text-decoration: none;
+    transition: all ease .25s;
+}
+
+.jv-page-jobs .action-links-module {
+    padding: 2em 0 0;
+    text-align: center;
+}
+
+.jv-page-jobs .btn-primary {
+    background-color: #0094ff;
+    border-color: #0094ff;
+    color: #ffffff;
+    margin-right: 1em;
+}
+
+.jv-page-jobs .btn-primary:hover {
+    background-color: #33a9ff;
+    border: 2px solid #0094ff;
+}
+
+.jv-page-jobs .btn-tertiary {
+    background-color: #ffffff;
+    color: #0094ff;
+}
+
+.jv-page-jobs .btn-tertiary:hover {
+    border: 2px solid #e3e3e3;
+    color: #0094ff;
+}
+
 
 /* ===== JOB LISTINGS PAGE  =================== */
 .jv-wrapper > h2 {
@@ -208,12 +261,12 @@ h3.h2 {
   transition: all .35s ease;
 }
 
-.jv-job-list tr:hover {
-  background-color: #f3f3f3;
+.jv-job-list tr:hover td {
+  background-color: #e3e3e3;
 }
 
 .jv-job-list td {
-  border-bottom: solid 1px #f3f3f3;
+  border-bottom: solid 1px #e3e3e3;
   padding: .75rem 1rem;
   vertical-align: middle;
 }
