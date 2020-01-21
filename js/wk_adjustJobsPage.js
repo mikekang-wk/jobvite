@@ -1,4 +1,4 @@
-var wk_adjustJobsPage = (function(){
+function wk_adjustJobsPage() {
     'use strict';
 
     var jobsPage = document.querySelector('body.jv-page-jobs');
@@ -83,4 +83,8 @@ var wk_adjustJobsPage = (function(){
             })(i);
         }
     })();
-})();
+}
+
+window.addEventListener('DOMContentLoaded', function(e) {
+  wk_adjustJobsPage();
+});
