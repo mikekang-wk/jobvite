@@ -7,6 +7,41 @@ function wk_adjustJobsPage() {
         return;
     }
 
+//  /search?c=Sales&p=0
+
+    var findAndReplace = (function(){
+        var headings = document.querySelectorAll('.jv-wrapper h3');
+
+        function replaceText(el){
+            var text = el.textContent;
+            var newText;
+
+            switch (text) {
+                case 'Cost of Revenues':
+                    newText = 'Support Our Customers';
+                    break;
+                case 'Research & Development':
+                    newText = 'Develop Our Solutions';
+                    break;
+                case 'General & Administrative':
+                    newText = 'Enable Our Business';
+                    break;
+                default:
+                    break;
+            }
+
+            if (newText) {
+                el.textContent = newText;
+            }
+
+            el.classList.add('processed');
+        }
+
+        for (var i = 0; i < headings.length; i++) {
+            replaceText(headings[i]);
+        }
+    })();
+
     var adjustLinks = (function(){
         var jobsPageAnchors = jobsPage.querySelectorAll('a');
 

@@ -217,6 +217,15 @@ hr {
     text-align: center;
 }
 
+.jv-page-jobs .jv-wrapper h3 {
+    opacity: 0;
+    transition: all ease .25s;
+}
+
+.jv-page-jobs .jv-wrapper .processed {
+    opacity: 1;
+}
+
 .jv-page-jobs .btn-primary {
     background-color: #0094ff;
     border-color: #0094ff;
